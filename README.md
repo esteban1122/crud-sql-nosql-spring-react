@@ -53,31 +53,7 @@ mongosh --file .\Spring_boot_crud\dbs\productoscrudmongo.js
 
 El script crea la base `productoscrudmongo`, la colección `products` y los mismos tres registros de ejemplo. Es seguro ejecutarlo más de una vez: solo inserta los datos iniciales si la colección está vacía.
 
-## 3. Configurar la conexión (si es necesario)
-
-Sin variables adicionales, el backend utiliza esta configuración:
-
-| Variable | Valor predeterminado |
-| --- | --- |
-| `DB_HOST` | `localhost` |
-| `DB_PORT` | `3306` |
-| `DB_NAME` | `productoscruddb` |
-| `DB_USER` | `root` |
-| `DB_PASSWORD` | vacío |
-| `MONGO_URI` | `mongodb://127.0.0.1:27017/productoscrudmongo` |
-
-Si su instalación usa otro puerto, usuario o contraseña, defina las variables **en la misma terminal** antes de iniciar el backend. Ejemplo:
-
-```powershell
-$env:DB_PORT = "3307"
-$env:DB_USER = "root"
-$env:DB_PASSWORD = "mi_contrasena"
-$env:MONGO_URI = "mongodb://127.0.0.1:27017/productoscrudmongo"
-```
-
-No incluya contraseñas reales en archivos versionados ni en el repositorio remoto.
-
-## 4. Ejecutar el backend
+## 3. Ejecutar el backend
 
 Abra una terminal en la raíz del repositorio y ejecute:
 
@@ -101,7 +77,7 @@ Invoke-RestMethod http://127.0.0.1:8081/api/mongo/productos
 
 Ambos comandos deben devolver los productos iniciales de su respectiva base de datos.
 
-## 5. Ejecutar el frontend
+## 4. Ejecutar el frontend
 
 Abra una segunda terminal desde la raíz del repositorio y ejecute:
 
